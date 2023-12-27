@@ -1,7 +1,3 @@
 {
-    "files.autoSave": "onFocusChange",
-    "github.copilot.enable": {
-        "typescript": "false",
-        "test.ts": "true"
-    }
+    "files.autoSave": "onFocusChange"
 }

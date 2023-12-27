@@ -1,9 +1,6 @@
-require('@rushstack/eslint-patch/modern-module-resolution');
-
 module.exports = {
     root: true,
     extends: [
-        'next/core-web-vitals',
         'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
     ],
@@ -11,7 +8,6 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 'latest',
     },
-    // extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
     plugins: ['prettier', 'unused-imports'],
     rules: {
         'prettier/prettier': ['warn', require('./.prettierrc')],
