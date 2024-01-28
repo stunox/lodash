@@ -1,9 +1,6 @@
 module.exports = {
     root: true,
-    extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:prettier/recommended',
-    ],
+    extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
@@ -16,6 +13,8 @@ module.exports = {
         '@typescript-eslint/no-empty-function': 'off',
         '@typescript-eslint/camelcase': 'off',
         '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-array-constructor': 'off',
         semi: ['error', 'always'],
         'unused-imports/no-unused-imports': 2,
         'unused-imports/no-unused-vars': 1,

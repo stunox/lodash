@@ -13,13 +13,10 @@
  * chunk([1, 2, 3, 4, 5, 6, 7, 8], 2);
  * // => [[1, 2], [3, 4], [5, 6], [7, 8]]
  */
-module.exports.chunk = function (array, size) {
-    if (!Array.isArray(array)) throw new TypeError('Expected an array');
-    if (typeof size !== 'number') throw new TypeError('Expected a number');
-
+function chunk(array, size = 1) {
     size = Math.max(Math.floor(size), 0);
 
-    const length = array == null ? 0 : array.length;
+    const length = array == null || array.length < 0 ? 0 : array.length;
 
     if (!length || size < 1) return [];
 
@@ -32,4 +29,6 @@ module.exports.chunk = function (array, size) {
     }
 
     return result;
-};
+}
+
+module.exports = chunk;
